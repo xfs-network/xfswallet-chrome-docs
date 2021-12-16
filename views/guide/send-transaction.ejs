@@ -1,0 +1,20 @@
+<%- include('../header'); -%>
+<h1>发送交易</h1>
+<hr/>
+<p>
+    通过调用 JS-API 唤起钱包插件，向指定的地址发送自定义交易信息。
+</p>
+<p>
+    相比于发起转账交易，提供了更多的选项支持。自定义交易数据可以完成例如：创建合约，合约调用等高级操作
+</p>
+<pre><code class="language-js">const sendOpts = {
+    to: 'address',
+    val: 'value',
+    data: '0x1f03...'
+};
+xfswallet.sendTransaction(sendOpts, function(){
+    // Do something...
+}); 
+</code></pre>
+
+<%- include('../footer'); -%>

@@ -1,0 +1,27 @@
+<%- include('../header'); -%>
+<h1>连接账户</h1>
+<hr/>
+<p>
+    在一些应用场景下需要使用 XFS 账户信息（通常是钱包地址信息），用以标识用户身份。
+</p>
+<p>
+    使用 JS-API 唤起钱包插件，需要用户同意授权后即可获取到账户信息。
+</p>
+<pre><code class="language-js">xfswallet.connect(function(account){
+    // Do something...
+}); 
+</code></pre>
+
+<div>
+    <button id="connectAccountBtn" type="button" class="btn btn-primary">点击连接钱包</button>
+</div>
+<script>
+    $(function(){
+        $('#connectAccountBtn').on('click', function(){
+            xfswallet.connect(function(){
+
+            });
+        });
+    });
+</script>
+<%- include('../footer'); -%>
