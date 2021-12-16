@@ -1,0 +1,41 @@
+<%- include('../header'); -%>
+<h1>创建 NFT 资产</h1>
+<hr/>
+<p>
+    钱包插件 JS-API 提供了创建符合 XIB-3 协议的通证代币，以及一些高级的操作方法。
+</p>
+
+<h2>创建 NFT 资产</h2>
+<pre><code class="language-js">const sendOpts = {
+    to: 'address',
+    val: 'value',
+    data: '0x1f03...'
+};
+xfswalletnft.create(sendOpts, function(){
+    // Do something...
+}); 
+</code></pre>
+
+<h2>调用资产转移方法</h2>
+<pre><code class="language-js">const sendOpts = {
+    to: 'address',
+    val: 'value',
+    data: '0x1f03...'
+};
+xfswalletnft.transfer(sendOpts, function(){
+    // Do something...
+}); 
+</code></pre>
+
+<h2>调用授权方法</h2>
+<pre><code class="language-js">const sendOpts = {
+    to: 'address',
+    val: 'value',
+    data: '0x1f03...'
+};
+xfswalletnft.approve(sendOpts, function(){
+    // Do something...
+}); 
+</code></pre>
+
+<%- include('../footer'); -%>

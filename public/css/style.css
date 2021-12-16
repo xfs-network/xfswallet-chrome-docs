@@ -134,3 +134,7 @@ main {
 
 .fw-semibold { font-weight: 600; }
 .lh-tight { line-height: 1.25; }
+
+.btn-toggle-nav .active {
+  background-color: #d2f4ea;
+}

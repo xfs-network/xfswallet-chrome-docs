@@ -1,0 +1,41 @@
+<%- include('../header'); -%>
+<h1>创建通证代币</h1>
+<hr/>
+<p>
+    钱包插件 JS-API 提供了创建符合 XIB-2 协议的通证代币，以及一些高级的操作方法。
+</p>
+
+<h2>创建通证代币</h2>
+<pre><code class="language-js">const sendOpts = {
+    to: 'address',
+    val: 'value',
+    data: '0x1f03...'
+};
+xfswallettoken.create(sendOpts, function(){
+    // Do something...
+}); 
+</code></pre>
+
+<h2>调用转账方法</h2>
+<pre><code class="language-js">const sendOpts = {
+    to: 'address',
+    val: 'value',
+    data: '0x1f03...'
+};
+xfswallettoken.transfer(sendOpts, function(){
+    // Do something...
+}); 
+</code></pre>
+
+<h2>调用授权方法</h2>
+<pre><code class="language-js">const sendOpts = {
+    to: 'address',
+    val: 'value',
+    data: '0x1f03...'
+};
+xfswallettoken.approve(sendOpts, function(){
+    // Do something...
+}); 
+</code></pre>
+
+<%- include('../footer'); -%>

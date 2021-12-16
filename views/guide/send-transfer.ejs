@@ -1,0 +1,28 @@
+<%- include('../header'); -%>
+<h1>发送交易</h1>
+<hr/>
+<p>
+    通过调用 JS-API 唤起钱包插件，向指定的地址发送转账交易。
+</p>
+<pre><code class="language-js">const txOpts = {
+    to: 'address',
+    val: 'value',
+};
+xfswallet.transfer(txOpts, function(){
+    // Do something...
+}); 
+</code></pre>
+
+<div>
+    <button id="connectAccountBtn" type="button" class="btn btn-primary">点击发送转账交易</button>
+</div>
+<script>
+    $(function(){
+        $('#connectAccountBtn').on('click', function(){
+            xfswallet.connect(function(){
+
+            });
+        });
+    });
+</script>
+<%- include('../footer'); -%>
